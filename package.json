@@ -1,0 +1,24 @@
+{
+  "name": "node-red-contrib-localstorage",
+  "version": "1.0.0",
+  "description": "A Node-RED node for save on localstorage",
+  "author": "Capelinha",
+  "license": "MIT",
+  "keywords": [
+    "node-red",
+    "node-localstorage",
+    "localstorage"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Capelinha/node-red-contrib-localstorage.git"
+  },
+  "node-red": {
+    "nodes": {
+      "localstorage": "src/localstorage.js"
+    }
+  },
+  "dependencies": {
+    "node-localstorage": "^2.2.1"
+  }
+}

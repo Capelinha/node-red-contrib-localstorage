@@ -1,0 +1,164 @@
+<!-- configuration -->
+<script type="text/javascript">
+  RED.nodes.registerType('local-storage',{
+      category: 'config',
+      defaults: {
+          name: { value: '', required: true },
+      },
+      label: function() {
+          return this.name;
+      }
+  });
+</script>
+
+<script type="text/html" data-template-name="local-storage">
+  <div class="form-row">
+      <label for="node-config-input-name"><i class="icon-bookmark"></i> Name</label>
+      <input type="text" id="node-config-input-name">
+  </div>
+</script>
+
+<!-- set item -->
+<script type="text/javascript">
+  RED.nodes.registerType('set item',{
+      category: 'localstorage',
+      color: '#e76fa1',
+      defaults: {
+          name: { value: '' },
+          localStorage: {value: '', type: 'local-storage', required: true},
+      },
+      inputs: 1,
+      outputs: 1,
+      icon: "inject.svg",
+      label: function() {
+          return this.name || "set item";
+      }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="set item">
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-localStorage"><i class="icon-tag"></i> LocalStorage</label>
+    <input type="text" id="node-input-localStorage" placeholder="LocalStorage">
+  </div>
+</script>
+
+<!-- get item -->
+<script type="text/javascript">
+  RED.nodes.registerType('get item',{
+      category: 'localstorage',
+      color: '#e76fa1',
+      defaults: {
+          name: { value: '' },
+          localStorage: {value: '', type: 'local-storage', required: true},
+      },
+      inputs: 1,
+      outputs: 1,
+      icon: "arrow-in.png",
+      label: function() {
+          return this.name || "get item";
+      }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="get item">
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-localStorage"><i class="icon-tag"></i> LocalStorage</label>
+    <input type="text" id="node-input-localStorage" placeholder="LocalStorage">
+  </div>
+</script>
+
+<!-- remove item -->
+<script type="text/javascript">
+  RED.nodes.registerType('remove item',{
+      category: 'localstorage',
+      color: '#e76fa1',
+      defaults: {
+          name: { value: '' },
+          localStorage: {value: '', type: 'local-storage', required: true},
+      },
+      inputs: 1,
+      outputs: 1,
+      icon: "font-awesome/fa-times",
+      label: function() {
+          return this.name || "remove item";
+      }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="remove item">
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-localStorage"><i class="icon-tag"></i> LocalStorage</label>
+    <input type="text" id="node-input-localStorage" placeholder="LocalStorage">
+  </div>
+</script>
+
+<!-- clear -->
+<script type="text/javascript">
+  RED.nodes.registerType('clear',{
+      category: 'localstorage',
+      color: '#e76fa1',
+      defaults: {
+          name: { value: '' },
+          localStorage: {value: '', type: 'local-storage', required: true},
+      },
+      inputs: 1,
+      outputs: 1,
+      icon: "font-awesome/fa-trash-o",
+      label: function() {
+          return this.name || "clear";
+      }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="clear">
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-localStorage"><i class="icon-tag"></i> LocalStorage</label>
+    <input type="text" id="node-input-localStorage" placeholder="LocalStorage">
+  </div>
+</script>
+
+<!-- has item -->
+<script type="text/javascript">
+  RED.nodes.registerType('has item',{
+      category: 'localstorage',
+      color: '#e76fa1',
+      defaults: {
+          name: { value: '' },
+          localStorage: {value: '', type: 'local-storage', required: true},
+      },
+      inputs: 1,
+      outputs: 2,
+      icon: "font-awesome/fa-search",
+      label: function() {
+          return this.name || "has item";
+      }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="has item">
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-localStorage"><i class="icon-tag"></i> LocalStorage</label>
+    <input type="text" id="node-input-localStorage" placeholder="LocalStorage">
+  </div>
+</script>
