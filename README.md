@@ -12,7 +12,7 @@ npm install node-red-contrib-localstorage
 
 How to use
 -----------
-![Example Flow](/example/flow_example.png
+![Example Flow](/example/flow_example.png)
 
 #### Configure the node
 Configure the local-storage configuration with a unique name for the storage. To create multiple storages it is necessary to create new configurations with different names
